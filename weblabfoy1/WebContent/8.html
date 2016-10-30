@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+for(var i = 0; i < 10; i++){
+$("body").html($("body").html() + '<div id="div1" style="width:250px;height:20px;display:none;background-color:red;"><font color="white">“Ne Mutlu Türk’üm Diyene!”</font></div><br>');
+}
+
+$.each($("div"), function(index, value){
+	window.setTimeout(function(){
+		$(value).fadeIn();
+	}, index*300);
+})
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
